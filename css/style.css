@@ -1,5 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* header part  */
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+header .bg-image {
+    background-image: url('../images/shutterstock_127894235-1000x640.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 40px 100px 0; */
+}
+header .navbar .logo {
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 250px;
+    height: 150px;
+}
+header .navbar .logo h1 {
+    text-align: center;
+    padding-top: 15%;
+    box-sizing: border-box;
+}
+header .navbar .logo h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 64px;
+    font-family: 'Timmana', sans-serif;
+    letter-spacing: .1em;
+}
+header .navbar .navbar-menu {
+    border: 2px solid #fff;
+    list-style-type: none;
+    margin: 40px 0 50px;
+    padding: 25px 10px;
+    
+}
+header .navbar .navbar-menu li.nav-items {
+    display: inline-block;
+    margin: 0 5px;
+    /* padding-top: 10px; */
+    
+}
+header .navbar .navbar-menu .nav-items a.nav-links {
+    padding: 10px 17px 8px;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Timmana', sans-serif;
+    transition: background-color 1s;
+}
+header .navbar .navbar-menu .nav-items a.nav-links:hover {
+    background-color: rgb(0, 0, 0, 0.8);
+}
+header .navbar .navbar-menu .nav-items:nth-child(1) a.nav-links {
+    background-color: rgb(0, 0, 0, 0.8);
+    transition: none;
+}
+header .navbar .navbar-menu .nav-items:nth-child(2) {
+    position: relative;
+}
+header .navbar .navbar-menu .nav-items .submenu {
+    position: absolute;
+    bottom: -145px;
+    left: -30px;
+    width: 140px;
+    height: 120px;
+    background-color: rgb(0, 0, 0, 0.8);
+    list-style-type: none;
+    display: none;
+    visibility: hidden;
+    animation: sub-height .5s ease-out;
+    
+}
+header .navbar .navbar-menu .nav-items .submenu li {
+    display: block;
+    margin-top: 15px;
+}
+header .navbar .navbar-menu .nav-items .submenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0 0 10px;
+    transition: color .5s;
+}
+header .navbar .navbar-menu .nav-items .submenu li a:hover {
+    color: gold;
+}
+header .navbar .navbar-menu .nav-items:nth-child(2):hover .submenu {
+    display: block;
+    visibility: visible;
+}
+@keyframes sub-height {
+   
 }
