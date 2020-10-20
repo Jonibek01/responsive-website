@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Timmana&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +28,7 @@ header .navbar {
     margin: 0 auto;
     /* padding: 40px 100px 0; */
 }
+
 header .navbar .logo {
     background-color: rgb(0, 0, 0, 0.8);
     width: 250px;
@@ -51,6 +52,7 @@ header .navbar .navbar-menu {
     margin: 40px 0 50px;
     padding: 25px 10px;
     
+    
 }
 header .navbar .navbar-menu li.nav-items {
     display: inline-block;
@@ -67,6 +69,8 @@ header .navbar .navbar-menu .nav-items a.nav-links {
     font-weight: 500;
     font-family: 'Timmana', sans-serif;
     transition: background-color 1s;
+    position: relative;
+
 }
 header .navbar .navbar-menu .nav-items a.nav-links:hover {
     background-color: rgb(0, 0, 0, 0.8);
@@ -75,20 +79,22 @@ header .navbar .navbar-menu .nav-items:nth-child(1) a.nav-links {
     background-color: rgb(0, 0, 0, 0.8);
     transition: none;
 }
-header .navbar .navbar-menu .nav-items:nth-child(2) {
+header .navbar .navbar-menu .nav-items:nth-child(2),  .nav-items:nth-child(5){
     position: relative;
 }
 header .navbar .navbar-menu .nav-items .submenu {
     position: absolute;
-    bottom: -145px;
+    bottom: -130px;
     left: -30px;
     width: 140px;
     height: 120px;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0, 1);
     list-style-type: none;
     display: none;
     visibility: hidden;
-    animation: sub-height .5s ease-out;
+    animation-name: sub-height;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
     
 }
 header .navbar .navbar-menu .nav-items .submenu li {
@@ -104,16 +110,120 @@ header .navbar .navbar-menu .nav-items .submenu li a {
 }
 header .navbar .navbar-menu .nav-items .submenu li a:hover {
     color: gold;
+
 }
 header .navbar .navbar-menu .nav-items:nth-child(2):hover .submenu {
     display: block;
     visibility: visible;
+    
 }
-@keyframes sub-height {
-   0% {
-       
+header .navbar .navbar-menu .nav-items:nth-child(5):hover .submenu {
+    display: block;
+    visibility: visible;
+    
+}
+
+header .navbar-content {
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
+}
+header .navbar-content .sliding-text {
+    margin-top: 40px;
+    /* font-size: 55px; */
+    font-family: 'Encode Sans', sans-serif;
+}
+header .navbar-content .sliding-text h3 {
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    /* font-family: 'Encode Sans', sans-serif; */
+}
+header .navbar-content .sliding-text h2 {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #fff;
+} 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1250px) {
+    /* header .navbar {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    } */
+    header .navbar .navbar-menu {
+        padding: 12px 0px
     }
- 100% {
-     
+    header .navbar .navbar-menu .nav-items a.nav-links {
+        padding: 5px 6px 0px;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    header .navbar {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    header .navbar .navbar-menu {
+        padding: 12px 0px
+    }
+    header .navbar .navbar-menu .nav-items a.nav-links {
+        padding: 5px 6px 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    header .navbar .logo {
+        width: 200px;
+        height: 100px;
+    }
+    header .navbar .logo h1 {
+        padding-top: 10%;
+    }
+    header .navbar .logo h1 a {
+        font-size: 44px;
+        letter-spacing: .05rem;
+    }
+    header .navbar .navbar-menu {
+        text-align: center;
+    }
+    header .navbar .navbar-menu li.nav-items {
+        display: block;
+        margin: 7px 0;
+        width: 100%;
+    }
+    header .navbar .navbar-menu li.nav-items .nav-links {
+        padding: 5px 20px 0px;
+        box-sizing: border-box;
+    }
+    header .navbar .navbar-menu .nav-items .submenu {
+        left: 150px;
+        top: -5px;
+    }
+    /* header .navbar {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    } */
+    
+    /* header .navbar .navbar-menu {
+        padding: 12px 0px
+    }
+    header .navbar .navbar-menu .nav-items a.nav-links {
+        padding: 5px 6px 0px;
+    } */
+}
+
