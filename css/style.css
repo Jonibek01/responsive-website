@@ -606,9 +606,11 @@ main .main-content .container {
     text-align: center;
 }
 main .main-content .container h2 {
-    font-family: sans-serif;
-    font-size: 35px;
-    margin-bottom: 10px;
+    font-family: 'Jockey One', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: .5rem;
+    margin-bottom: 20px;
 }
 main .main-content .container h4 {
     font-size: 16px;
@@ -628,6 +630,68 @@ main .main-content .container .fa {
 main .main-content .container .fa:hover {
         color: black;
 }
+
+
+main .features {
+    width: 100%;
+    margin: 0 auto;
+}
+main .features h2 {
+    text-align: center;
+    margin: 60px 0;
+    font-family: 'Jockey One', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: .5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+main .features .flexbox-feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .features .flexbox-feature .col-4 {
+    display: flex;
+    flex-direction: row;
+    max-width: 30%;
+    margin: 0 10px;
+    text-align: justify;
+}
+main .features .flexbox-feature .col-4 p:nth-child(2) {
+    font-size: 15px;
+    color: #444
+}
+.super-para {
+    color: #efb433;
+    font-size: 55px;
+    margin-right: 20px;
+    font-weight: bold;
+    margin-top: -20px;
+    cursor: pointer;
+}
+.super-para:hover {
+    color: black;
+    transition: .5s;
+}
+
+main .features .feature-footer {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.super-line {
+    width: 100%;
+    margin: 50px 0;
+}
+
+
+
 @media screen and (min-width: 800px) {
     main .main-content {
         margin-top: 100px;
@@ -639,6 +703,51 @@ main .main-content .container .fa:hover {
         margin-top: 50px;
         
     }
+    main .features .flexbox-feature {
+        display: flex;
+        flex-direction: column;
+    }
+    main .features .flexbox-feature .col-4 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 10px;
+        text-align: justify;
+    }
+    
+main .features .feature-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main .features .flexbox-feature .col-4 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0 10px;
+    text-align: justify;
+    justify-content: space-around;
+}
+  main .features .flexbox-feature .col-4 .super-para {
+        width: 10%;
+        font-size: 40px;
+        margin: 0 0 30px;
+    }
+    main .features .flexbox-feature .col-4 p:nth-child(2) {
+        width: 80%;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    main .features .feature-footer .img-box {
+        width: 50%;
+    }
+    main .features .feature-footer .img-box img{
+        width: 50%;
+        margin-left: 25%;
+    }
+    
+    
 }
 @media screen and (max-width: 500px) {
     main .main-content .container h2{
@@ -649,25 +758,67 @@ main .main-content .container .fa:hover {
         font-size: 18px;
         margin-bottom: 20px;
     }
+    main .main-content .container .fa {
+        font-size: 30px;
+    }
+    main .features .flexbox-feature .col-4 {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        margin: 0 10px;
+        text-align: justify;
+        justify-content: space-around;
+    }
+      main .features .flexbox-feature .col-4 .super-para {
+            width: 10%;
+            font-size: 40px;
+            margin: 0 0 30px;
+        }
+        main .features .flexbox-feature .col-4 p:nth-child(2) {
+            width: 80%;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        main .features .feature-footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        main .features .feature-footer .img-box {
+            width: 50%;
+        }
+        main .features .feature-footer .img-box img{
+            width: 50%;
+            margin-left: 25%;
+        }
 }
 
- 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer .bg-image2{
+    background-image: url('../images/Green\ Mountains\ at\ Green\ Forest\ Wallpaper.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+}
+footer .footer-start-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+}
+footer .footer-start-content .container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+}
+footer .footer-start-content .container .col-4:nth-child(2){
+    width: 200px;
+    height: 200px;
+    border: 1px solid #fff;
+}
 
 
