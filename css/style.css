@@ -834,7 +834,7 @@ main .features .flexbox-feature .col-4 {
     main .features .flexbox-feature .col-4 .super-para {
         width: 10%;
         font-size: 40px;
-        margin: 10px 20px 0 0px;
+        margin: 10px 30px 0 0px;
     }
     main .features .flexbox-feature .col-4 p:nth-child(2) {
         width: 80%;
@@ -859,7 +859,7 @@ footer .bg-image2{
 }
 footer .footer-start-content {
     background-color: rgba(0, 0, 0, 0.7);
-    height: 450px;
+        height: 460px;
 }
 footer .footer-start-content .container {
     width: 90%;
