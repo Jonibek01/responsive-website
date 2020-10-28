@@ -1,823 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Jockey+One&family=Timmana&family=Titillium+Web&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* header part  */
-
-header {
-    width: 100%;
-    height: 100vh;
-}
-header .bg-image {
-    background-image: url('../images/shutterstock_127894235-1000x640.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 730px;
-}
-header .navbar {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 80%;
-    margin: 0 auto;
-    /* padding: 40px 100px 0; */
-}
-
-header .navbar .logo {
-    background-color: rgb(0, 0, 0, 0.8);
-    width: 250px;
-    height: 150px;
-}
-header .navbar .logo h1 {
-    text-align: center;
-    padding-top: 15%;
-    box-sizing: border-box;
-}
-header .navbar .logo h1 a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 64px;
-    font-family: 'Timmana', sans-serif;
-    letter-spacing: .1em;
-}
-header .navbar .navbar-menu {
-    border: 2px solid #fff;
-    list-style-type: none;
-    margin: 40px 0 50px;
-    padding: 25px 10px;
-    
-    
-}
-header .navbar .navbar-menu li.nav-items {
-    display: inline-block;
-    margin: 0 5px;
-    /* padding-top: 10px; */
-    
-}
-header .navbar .navbar-menu .nav-items a.nav-links {
-    padding: 10px 17px 8px;
-    box-sizing: border-box;
-    font-size: 22px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    font-family: 'Timmana', sans-serif;
-    transition: background-color 1s;
-    position: relative;
-
-}
-header .navbar .navbar-menu .nav-items a.nav-links:hover {
-    background-color: rgb(0, 0, 0, 0.8);
-}
-header .navbar .navbar-menu .nav-items:nth-child(1) a.nav-links {
-    background-color: rgb(0, 0, 0, 0.8);
-    transition: none;
-}
-header .navbar .navbar-menu .nav-items:nth-child(2),  .nav-items:nth-child(5){
-    position: relative;
-}
-header .navbar .navbar-menu .nav-items .submenu {
-    position: absolute;
-    bottom: -130px;
-    left: -30px;
-    width: 140px;
-    height: 120px;
-    background-color: rgb(0, 0, 0, 1);
-    list-style-type: none;
-    display: none;
-    visibility: hidden;
-    animation-name: sub-height;
-    animation-duration: .5s;
-    animation-timing-function: ease-in;
-    
-}
-header .navbar .navbar-menu .nav-items .submenu li {
-    display: block;
-    margin-top: 15px;
-}
-header .navbar .navbar-menu .nav-items .submenu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 0 0 10px;
-    transition: color .5s;
-}
-header .navbar .navbar-menu .nav-items .submenu li a:hover {
-    color: gold;
-
-}
-header .navbar .navbar-menu .nav-items:nth-child(2):hover .submenu {
-    display: block;
-    visibility: visible;
-    
-}
-header .navbar .navbar-menu .nav-items:nth-child(5):hover .submenu {
-    display: block;
-    visibility: visible;
-    
-}
-
-/* Navbar content  */
-
-header .navbar-content {
-    margin-top: 50px;
-    width: 100%;
-    height: 300px;
-    text-align: center;
-    position: relative;
-}
-header .navbar-content .sliding-text {
-    margin-top: 40px;
-    /* font-size: 55px; */
-    font-family: 'Titillium Web', sans-serif;
-    letter-spacing: .7rem;
-    animation-name: sliding-text;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out; 
-    animation-play-state: running;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-
-}
-header .navbar-content .sliding-text h3 {
-    font-size: 50px;
-    text-transform: uppercase;
-    color: #fff;
-}
-header .navbar-content .sliding-text h2 {
-    margin-top: -30px;
-    font-size: 90px;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-
-} 
-header .navbar-content .sliding-text h2 a{
-    text-decoration: none;
-    color: #fff;
-}
-
-
-header .navbar-content .sliding-text2 {
-    /* padding-bottom: 40px; */
-    position: absolute;
-    right: 350px;
-    top: 0px;
-    font-family: 'Titillium Web', sans-serif;
-    letter-spacing: .7rem;
-    animation-name: sliding-text2;
-    animation-duration: 5s;
-    animation-timing-function: ease-out; 
-    animation-play-state: running;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-}
-header .navbar-content .sliding-text2::after {
-    animation-delay: 4s;
-}
-header .navbar-content .sliding-text2 h3 {
-    font-size: 50px;
-    text-transform: uppercase;
-    color: #fff;
-}
-header .navbar-content .sliding-text2 h2 {
-    margin-top: -30px;
-    font-size: 90px;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-} 
-header .navbar-content .sliding-text2 h2 a{
-    text-decoration: none;
-    color: #fff;
-}
-
-
-
-@keyframes sliding-text {
-   0% {
-    opacity: 1;
-   }
-   10% {
-    opacity: 0.75;
-       
-   }
-   20% {
-    opacity: 0.5;
-
-   }
-   30% {
-    opacity: 0.25;
-
-   }
-   40%{
-    opacity: 0.0;
-
-   }
-   50%{
-    opacity: 0;
-   }
-   60% {
-    opacity: 0;
-
-   }
-   70%{
-    opacity: 0.25;
-
-   }
-   80%{
-    opacity: 0.5;
-
-   }
-   90%{
-    opacity: 0.75;
-
-   }
-   100% {
-    opacity: 1;
-   }
-
-}
-
-@keyframes sliding-text2 {
-    0% {
-        opacity: 0;
-       }
-       10% {
-        opacity: 0;
-           
-       }
-       20% {
-        opacity: 0;
-    
-       }
-       30% {
-        opacity: 0;
-    
-       }
-       40%{
-        opacity: 0.75;
-    
-       }
-       50%{
-        opacity: 1;
-       }
-       60% {
-        opacity: 0.75;
-    
-       }
-       70%{
-        opacity: 0;
-    
-       }
-       80%{
-        opacity: 0;
-    
-       }
-       90%{
-        opacity: 0;
-    
-       }
-       100% {
-        opacity: 0;
-       }
-}
-
-
-
-
-header .navbar-content .sliding-text2 h2 .hover-anch:hover {
-    color: gold;
-}
-header .navbar-content .left-right {
-    margin-top: 100px;
-}
-header .navbar-content .left-right a {
-    font-size: 35px;
-    color: #fff;
-    cursor: pointer;
-    margin: 0px 5px 0;
-}
-header .navbar-content .left-right a:nth-child(1) i:hover {
-    transform: translateX(-10px);
-    transition: .5s;
-}
-header .navbar-content .left-right a:nth-child(2) i:hover {
-    transform: translateX(10px);
-    transition: .5s;
-}
-
-header .navbar-footer {
-    margin-top: 100px;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-header .navbar-footer .footer-text {
-    flex-basis: 500px;
-}
-header .navbar-footer .footer-text p{
-    padding: 2px 0 0 0;
-    line-height: 18px;
-    font-family: 'Jockey One', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: #f0b736;
-}
-header .navbar-footer .footer-search {
-    flex-basis: 500px;
-}
-header .navbar-footer .footer-search input {
-    font-size: 20px;
-    width: 70%;
-
-    padding: 5px;
-    background-color: #333;
-    border-right: none;
-    border-bottom: none;
-    outline: none;
-    color: #fff;
-}
-header .navbar-footer .footer-search .btn-search {
-    font-size: 17px;
-    padding: 5px;
-    font-family: 'Jockey One', sans-serif;
-    background-color: #f0b736;
-    border: none;
-    height: 35px;
-    cursor: pointer;
-    outline: none; 
-    width: 100px;
-    margin-left: 3px;
-}
-header .navbar-footer .footer-search .btn-search:hover {
-    background-color: #111;
-    color: white;
-    transition: .5s;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1250px) {
-    /* header .navbar {
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    } */
-    header .navbar .navbar-menu {
-        padding: 12px 0px
-    }
-    header .navbar .navbar-menu .nav-items a.nav-links {
-        padding: 5px 6px 0px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    header .navbar {
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    header .navbar .navbar-menu {
-        padding: 12px 0px
-    }
-    header .navbar .navbar-menu .nav-items a.nav-links {
-        padding: 5px 6px 0px;
-    }
-    header .navbar-content .sliding-text {
-        letter-spacing: .3rem;
-        
-    }
-    header .navbar-content .sliding-text2 {
-        right: 122px;
-        top: 40px;
-        letter-spacing: .3rem;
-    }
-    header .navbar-content .left-right {
-        margin-top: 40px;
-        margin-bottom: 0;
-    }
-    header .navbar-footer {
-        margin-top: 10%;
-        display: flex;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 500px) {
-    header .navbar .logo {
-        width: 200px;
-        height: 100px;
-    }
-    header .navbar .logo h1 {
-        padding-top: 10%;
-    }
-    header .navbar .logo h1 a {
-        font-size: 44px;
-        letter-spacing: .05rem;
-    }
-    header .navbar .navbar-menu {
-        text-align: center;
-    }
-    header .navbar .navbar-menu li.nav-items {
-        display: block;
-        margin: 7px 0;
-        width: 100%;
-    }
-    header .navbar .navbar-menu li.nav-items .nav-links {
-        padding: 5px 20px 0px;
-        box-sizing: border-box;
-    }
-    header .navbar .navbar-menu .nav-items .submenu {
-        left: 150px;
-        top: -5px;
-    }
-    header .navbar-content {
-        height: 197px;
-    }
-    header .navbar-content .sliding-text {
-    margin-top: 0;
-    /* font-size: 55px; */
-    font-family: 'Titillium Web', sans-serif;
-    letter-spacing: .3rem;
-    }
-    header .navbar-content .sliding-text h3 {
-        font-size: 30px;
-    }
-    header .navbar-content .sliding-text h2 {
-        margin-top: -10px;
-        font-size: 50px;
-    }
-    header .navbar-content .sliding-text2 {
-        right: 60px;
-        top: -10px;
-        letter-spacing: .3rem;
-    }
-    header .navbar-content .sliding-text2 h3 {
-        margin-top: 10px;
-        font-size: 30px;
-    }
-    header .navbar-content .sliding-text2 h2 {
-        margin-top: -10px;
-        font-size: 50px;
-    } 
-    header .navbar-content .left-right {
-        margin-top: 20px;
-        margin-bottom: 0;
-    }
-    header .navbar-content .left-right a {
-        font-size: 25px;
-        margin-bottom: 20px;
-
-    }
-    header .navbar-footer {
-        margin-top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    header .navbar-footer .footer-text {
-        margin-bottom: 10px;
-    }
-
-}
-
-/* section articles start from here  */
-
-
-section {
-    width: 100%;
-    height: 100%;
-}
-section article {
-    width: 100%;
-    height: 100%;
-}
-section article .flexbox {
-    padding-top: 50px;
-    width: 90%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-section article .flexbox .row {
-    /* width: 33%; */
-    text-align: center;
-    margin: 0 30px;
-}
-section article .flexbox .row h3 {
-    margin: 10px 0;
-    font-size: 30px;
-    text-transform: uppercase;
-
-}
-section article .flexbox .row p {
-    color: #888;
-}
-section article .flexbox .row a .fa{
-    margin-top: 20px;
-    font-size: 45px;
-    color: #999;
-}
-section article .flexbox .row a .fa:hover {
-    color: black;
-}
-section article .flexbox .row:hover img{
-    transform: rotate3d(0, 10, 0, 10.142rad);
-}
-
-
-@media screen and (max-width: 1200px) {
-
-}
-@media screen and (max-width: 800px) {
-    section article .flexbox {
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    section article .flexbox .row {
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    section article .flexbox {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    section article .flexbox .row {
-        margin-bottom: 50px;
-    }
-    section article .flexbox .row h3 {
-        font-size: 25px;
-    }
-    section article .flexbox .row a .fa{
-        font-size: 30px;
-    }
-}
-
-/*    Here our main section is gonna start */
-
-main .main-content {
-    width: 100%;
-    height: auto;
-    background-color: #ccc;
-}
-main .main-content .container {
-    width: 70%;
-    margin: 0 auto;
-    padding: 40px 0;
-    /* font-family: 'Jockey One', sans-serif; */
-    text-align: center;
-}
-main .main-content .container h2 {
-    font-family: 'Jockey One', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    letter-spacing: .5rem;
-    margin-bottom: 20px;
-}
-main .main-content .container h4 {
-    font-size: 16px;
-    font-family: sans-serif;
-    color: #444;
-    margin-bottom: 10px;
-}
-main .main-content .container p {
-    color: #666;
-    margin-bottom: 20px;
-}
-main .main-content .container .fa {
-    margin-top: 20px;
-    font-size: 45px;
-    color: #999;
-}
-main .main-content .container .fa:hover {
-        color: black;
-}
-
-
-main .features {
-    width: 100%;
-    margin: 0 auto;
-}
-main .features h2 {
-    text-align: center;
-    margin: 60px 0;
-    font-family: 'Jockey One', sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    letter-spacing: .5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-main .features .flexbox-feature {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 90%;
-    margin: 0 auto;
-}
-
-main .features .flexbox-feature .col-4 {
-    display: flex;
-    flex-direction: row;
-    max-width: 30%;
-    margin: 0 10px;
-    text-align: justify;
-}
-main .features .flexbox-feature .col-4 p:nth-child(2) {
-    font-size: 15px;
-    color: #444
-}
-.super-para {
-    color: #efb433;
-    font-size: 55px;
-    margin-right: 20px;
-    font-weight: bold;
-    margin-top: -20px;
-    cursor: pointer;
-}
-.super-para:hover {
-    color: black;
-    transition: .5s;
-}
-
-main .features .feature-footer {
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.super-line {
-    width: 100%;
-    margin: 50px 0;
-}
-
-
-
-@media screen and (min-width: 800px) {
-    main .main-content {
-        margin-top: 100px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    main .main-content {
-        margin-top: 50px;
-        
-    }
-    main .features .flexbox-feature {
-        display: flex;
-        flex-direction: column;
-    }
-    main .features .flexbox-feature .col-4 {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        margin: 0 10px;
-        text-align: justify;
-    }
-    
-main .features .feature-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-main .features .flexbox-feature .col-4 {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    margin: 0 10px;
-    text-align: justify;
-    justify-content: space-around;
-}
-  main .features .flexbox-feature .col-4 .super-para {
-        width: 10%;
-        font-size: 40px;
-        margin: 0 0 30px;
-    }
-    main .features .flexbox-feature .col-4 p:nth-child(2) {
-        width: 80%;
-        margin-top: 10px;
-        font-size: 18px;
-    }
-    main .features .feature-footer .img-box {
-        width: 50%;
-    }
-    main .features .feature-footer .img-box img{
-        width: 50%;
-        margin-left: 25%;
-    }
-    
-    
-}
-@media screen and (max-width: 500px) {
-    main .main-content .container h2{
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-    main .main-content .container h4{
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    main .main-content .container .fa {
-        font-size: 30px;
-    }
-    main .features .flexbox-feature .col-4 {
-        display: flex;
-        flex-direction: row;
-        max-width: 100%;
-        margin: 0 10px;
-        text-align: justify;
-        justify-content: space-around;
-    }
-      main .features .flexbox-feature .col-4 .super-para {
-            width: 10%;
-            font-size: 40px;
-            margin: 0 0 30px;
-        }
-        main .features .flexbox-feature .col-4 p:nth-child(2) {
-            width: 80%;
-            margin-top: 10px;
-            font-size: 15px;
-        }
-        main .features .feature-footer {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-        main .features .feature-footer .img-box {
-            width: 50%;
-        }
-        main .features .feature-footer .img-box img{
-            width: 50%;
-            margin-left: 25%;
-        }
-}
-
-
-footer .bg-image2{
-    background-image: url('../images/Green\ Mountains\ at\ Green\ Forest\ Wallpaper.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 800px;
-}
-footer .footer-start-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: auto;
-}
-footer .footer-start-content .container {
-    width: 90%;
-    margin: 0 auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    color: #fff;
-}
-footer .footer-start-content .container .col-4:nth-child(2){
-    width: 200px;
-    height: 200px;
-    border: 1px solid #fff;
-}
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resposive</title>
+
+</head>
+<body>
+    <header>
+        <div class="bg-image">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1><a href="#">Hiking</a></h1>
+                </div>
+                <div class="navbar-menu">
+                    <li class="nav-items"><a href="#" class="nav-links ">Home</a></li>
+                    <li class="nav-items"><a href="#" class="nav-links ">About</a>
+                        <ul class="submenu">
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Archives</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-items"><a href="#" class="nav-links ">Trip Schedule</a></li>
+                    <li class="nav-items"><a href="#" class="nav-links ">Our blog</a></li>
+                    <li class="nav-items"><a href="#" class="nav-links ">Gallery</a>
+                        <ul class="submenu">
+                            <li><a href="#">Galery 1</a></li>
+                            <li><a href="#">Galery 2</a></li>
+                            <li><a href="#">Galery 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-items"><a href="#" class="nav-links ">Contacts</a></li>
+                </div>
+            </nav>
+
+            <div class="navbar-content">
+                <div class="sliding-text">
+                    <h3>Enjoy Outdoor activities</h1>
+                    <h2><a class="hover-anch" href="#">Join us!</a></h2>
+                </div>
+                <div class="sliding-text2">
+                    <h3>Hiking destination</h1>
+                    <h2><a class="hover-anch" href="#">Join us!</a></h2>
+                </div>
+                <div class="left-right">
+                    <a><i class="fa fa-arrow-circle-left"></i></a>
+                    <a><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="navbar-footer">
+                <div class="footer-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, officia?</p>
+                </div>
+                <div class="footer-search">
+                    <label for="search"></label>
+                    <input type="search" name="search" id="search" placeholder="search">
+                    <button class="btn-search">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section style="margin-top: 140px;">
+        <article>
+                <div class="flexbox">
+                    <div class="row">
+                        <img src="images/icon1.png" alt="icon1">
+                        <h3>Take <br> a hike</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis mollitia quaerat fugit. Id enim eum perferendis dolorum exercitationem commodi nulla aut omnis rem laudantium.</p>
+                        <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <div class="row">
+                        <img src="images/icon2.png" alt="icon2">
+                        <h3>HIKING DESTINATIONS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis mollitia quaerat fugit. Id enim eum perferendis dolorum exercitationem commodi nulla aut omnis rem laudantium.</p>
+                        <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <div class="row">
+                        <img src="images/icon3.png" alt="icon3">
+                        <h3>HIKING <br>ESSENTIALS</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo veritatis mollitia quaerat fugit. Id enim eum perferendis dolorum exercitationem commodi nulla aut omnis rem laudantium.</p>
+                        <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+        </article>
+    </section> 
+    <main>
+        <div class="main-content">
+            <div class="container">
+                <h2>WELCOME VISITOR!</h2>
+                <h4>We offer guided hiking and walking trips year-round - as well as wilderness camping, backpacking, cross-country skiing, and snowshoeing trips - visiting some of the wildest and most beautiful parks and natural areas.</h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.</p>
+                <a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature-content">
+                <h2 style="margin-bottom: 80px;">Upcoming Events</h2>
+                <!-- <i>fa fa-circle-right</i> -->
+                <div class="flexbox-feature">
+                    <div class="col-4">
+                        <p class="super-para">27/ <br>05 </p>
+                        <p>Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus....</p>
+                    </div>
+                    <div class="col-4">
+                        <p  class="super-para" >14/ <br>03 </p>
+                        <p>Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus....</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="super-para">05/ <br>03 </p>
+                        <p>Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus....</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="super-line">
+            <div class="feature-footer">
+                <div class="img-box">
+                    <img src="images/client_1.png" alt="logo 1">
+                </div>
+                <div class="img-box">
+                    <img src="images/client_2.png" alt="logo 2">
+                </div>
+                <div class="img-box">
+                    <img src="images/client_3.png" alt="logo 3">
+                </div>
+                <div class="img-box">
+                    <img src="images/client_4.png" alt="logo 4">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="bg-image2">
+            <div class="footer-start-content">
+                <div class="container">
+                    <div class="content-box">
+                        <div class="son-of-box">
+                            <h2>READ WHAT OUR RECENT CLIENTS SAY</h2>
+                            <div class="double-arrow">
+                                <a href="#"><i class="fa fa-angle-left"></i></a>
+                                <a href="#"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="border-box">
+                            <img src="images/tes_1-58x58.jpg" alt="human 1">
+                            <p> <i> Aenean nonummy hendrerit mau phasellu porta. Fusce suscipit varius mi sed. Cum sociis natoque penatibus et magnis dis parturient montes </i></p>
+                        </div>
+                        <h3> <i> Tim Barkley. Manager.</i></h3>
+                        <button class="btn-more">MORE</button>
+                    </div>
+                    <div class="content-box">
+                        <div class="border-box">
+                            <img src="images/tes_2-58x58.jpg" alt="human 1">
+                            <p> <i> Aenean nonummy hendrerit mau phasellu porta. Fusce suscipit varius mi sed. Cum sociis natoque penatibus et magnis dis parturient montes </i></p>
+                        </div>
+                        <h3> <i> Mr. John Anderson. Designer.<i></h3>
+                        <button class="btn-more">MORE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-end-content">
+                <div class="center-box">
+                    <p>&copy;2020<a href="#">PRIVACY POLICY</a></p>
+                    <div class="social-icons">
+                        <i class="fa fa-facebook-f"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-rss"></i>
+                        <i class="fa fa-pinterest"></i>
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                    <h2>TELEPHONE: +1 800 603 6035</h2>
+                    <i class="fa fa-chevron-circle-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
