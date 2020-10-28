@@ -1004,20 +1004,6 @@ footer .footer-end-content {
     transition: .5s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 800px) {
    
     footer .footer-start-content {
@@ -1062,9 +1048,6 @@ footer .footer-end-content {
         width: 100%;
         height: 20px;
     }
-
-
-
 
     .center-box {
         width: 60%;
